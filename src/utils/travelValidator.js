@@ -35,4 +35,4 @@ function isLikelyTravelQuery(mesage){
     return null;
 }
 
-module.exports = isLikelyTravelQuery;
+module.exports = {isLikelyTravelQuery};
