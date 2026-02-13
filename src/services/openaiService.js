@@ -26,7 +26,7 @@ You are a helpful travel assistant for MakeATrip, a travel booking platform.
 async function getChatResponse(messages){
     try{
         const response = await openai.chat.completions.create({
-            model: 'gpt-3.5-turbo',
+            model: 'gpt-4.1-nano',
             messages: [
                 {
                     role: 'system',

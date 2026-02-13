@@ -82,6 +82,7 @@ async function sendMessage(req, res, next){
         const aiResponse = await openaiService.getChatResponse(conversationHistory); // Get response from openai
 
         conversationService.addMessage(currentSessionId, 'assistant', aiResponse);
+        
 
         res.json({
             success: true,

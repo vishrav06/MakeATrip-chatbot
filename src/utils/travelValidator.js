@@ -16,8 +16,8 @@ const NON_TRAVEL_INDICATORS = [
 ];
 
 
-function isLikelyTravelQuery(mesage){
-    const lower = mesage.toLowerCase();
+function isLikelyTravelQuery(message){
+    const lower = message.toLowerCase();
     
 
     for(const keyword of NON_TRAVEL_INDICATORS){
