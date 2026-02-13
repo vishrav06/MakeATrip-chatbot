@@ -27,6 +27,9 @@ function getSession(sessionId){
     return conversations.get(sessionId);
 }
 
+function sessionExists(sessionId) {
+    return conversations.has(sessionId);
+}
 
 function addMessage(sessionId, role, content){
 
@@ -111,6 +114,7 @@ function cleanupExpiredSessions() {
     getSession,
     addMessage,
     getMessagesForOpenAI,
+    sessionExists,
     incrementWarnings,
     resetWarnings,
     closeSession,
