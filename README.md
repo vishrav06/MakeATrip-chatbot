@@ -21,62 +21,83 @@
   ```bash
   git clone <your-repo-url>
   cd MakeATrip-chatbot
+  ```
 
   2. Install dependencies
+  ```bash
   npm install
+  ```
 
-  3. Create a .env file in the root directory
+  4. Create a .env file in the root directory
+  ```
   OPENAI_API_KEY=your-openai-api-key
   PORT=3000
   NODE_ENV=development
+  ```
 
   Running the Application
 
   Development mode:
+  ```bash
   npm run dev
+  ```
 
   Production mode:
+   ```bash
   npm start
+  ```
 
   The server will start on http://localhost:3000
 
   API Endpoints
 
   Health Check
-
+  ```
   GET /api/health
+  ```
 
   Send Message
-
+  ```
   POST /api/chat/message
+  ```
+
   Body:
+  ```
   {
     "sessionId": "optional-session-id",
-    "message": "What are the best places to visit in Paris?"
+    "message": "What are the best places to visit in Goa?"
   }
+  ```
 
   Get Conversation History
-
+  ```
   GET /api/chat/history/:sessionId
+  ```
 
   Delete Session
-
+  ```
   DELETE /api/chat/session/:sessionId
+  ```
 
   Usage Example
 
   1. Start a new conversation:
+  ```
   POST http://localhost:3000/api/chat/message
   {
-    "message": "Tell me about beaches in Bali"
+    "message": "Tell me about beaches in Pondicherry"
   }
+  ```
 
-  2. Continue the conversation using the returned sessionId:
+  3. Continue the conversation using the returned sessionId:
+  ```
   POST http://localhost:3000/api/chat/message
   {
     "sessionId": "your-session-id",
     "message": "What about hotels?"
   }
+  ```
+
 
   Non-Travel Query Handling
 
